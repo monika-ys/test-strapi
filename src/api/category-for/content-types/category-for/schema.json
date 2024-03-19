@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_fors",
+  "info": {
+    "singularName": "category-for",
+    "pluralName": "category-fors",
+    "displayName": " Category ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "default": "Name",
+      "unique": true,
+      "required": true
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant.restaurant",
+      "inversedBy": "category_fors"
+    }
+  }
+}
